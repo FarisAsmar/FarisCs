@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faris | Cyber Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 4rem;
+      color: #00ffe7;
+      text-shadow: 0 0 10px #00ffe7;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.2; }
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      color: #aaa;
+      text-align: center;
+      max-width: 600px;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Faris</h1>
+  <div class="tagline">
+    Architecting transformation through code, security, and raw storytelling.
+  </div>
+  <footer>
+    &copy; 2025 Faris. Built with grit and GitHub Pages.
+  </footer>
+</body>
+</html>
