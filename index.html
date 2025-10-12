@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -20,8 +20,7 @@
 
     h1 {
       font-size: 4rem;
-      color: #00ffe7;
-      text-shadow: 0 0 10px #00ffe7;
+      color: #444; /* dark grey */
       animation: blink 1s infinite;
     }
 
@@ -30,12 +29,23 @@
       50% { opacity: 0.2; }
     }
 
-    .tagline {
+    .enter-button {
+      margin-top: 30px;
+      padding: 12px 30px;
       font-size: 1.2rem;
-      margin-top: 20px;
-      color: #aaa;
-      text-align: center;
-      max-width: 600px;
+      color: #ccc;
+      background-color: #222;
+      border: 2px solid white;
+      border-radius: 5px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px white;
+    }
+
+    .enter-button:hover {
+      background-color: #333;
+      box-shadow: 0 0 20px white;
     }
 
     footer {
@@ -48,9 +58,7 @@
 </head>
 <body>
   <h1>Faris</h1>
-  <div class="tagline">
-    Architecting transformation through code, security, and raw storytelling.
-  </div>
+  <button class="enter-button" onclick="location.href='projects.html'">Enter</button>
   <footer>
     &copy; 2025 Faris. Built with grit and GitHub Pages.
   </footer>
