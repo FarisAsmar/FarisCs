@@ -3,13 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cyber-themed portfolio of Faris, showcasing projects built with grit and precision." />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <title>Faris | Cyber Portfolio</title>
   <style>
-    body {
+    :root {
+      --bg-start: #0f0f0f;
+      --bg-end: #1a1a1a;
+      --text-main: #e0e0e0;
+      --text-muted: #555;
+      --accent: white;
+      --button-bg: #222;
+      --button-hover: #333;
+      --button-text: #ccc;
+      --header-color: #eee;
+    }
+
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
-      color: #e0e0e0;
+      background: linear-gradient(to bottom right, var(--bg-start), var(--bg-end));
+      color: var(--text-main);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -18,9 +37,22 @@
       overflow: hidden;
     }
 
+    header {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    nav a {
+      margin-right: 20px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
     h1 {
       font-size: 4rem;
-      color: #444; /* dark grey */
+      color: var(--header-color);
       animation: blink 1s infinite;
     }
 
@@ -33,34 +65,61 @@
       margin-top: 30px;
       padding: 12px 30px;
       font-size: 1.2rem;
-      color: #ccc;
-      background-color: #222;
-      border: 2px solid white;
+      color: var(--button-text);
+      background-color: var(--button-bg);
+      border: 2px solid var(--accent);
       border-radius: 5px;
       cursor: pointer;
       text-transform: uppercase;
       transition: all 0.3s ease;
-      box-shadow: 0 0 10px white;
+      box-shadow: 0 0 10px var(--accent);
     }
 
     .enter-button:hover {
-      background-color: #333;
-      box-shadow: 0 0 20px white;
+      background-color: var(--button-hover);
+      box-shadow: 0 0 20px var(--accent);
+    }
+
+    .enter-button:focus {
+      outline: 2px solid var(--accent);
     }
 
     footer {
       position: absolute;
       bottom: 20px;
       font-size: 0.9rem;
-      color: #555;
+      color: var(--text-muted);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      h1 {
+        animation: none;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Faris</h1>
-  <button class="enter-button" onclick="location.href='projects.html'">Enter</button>
+  <header>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="resume.pdf">Resume</a>
+    </nav>
+  </header>
+
+  <h1><span id="tagline">Faris</span></h1>
+  <button class="enter-button" aria-label="Enter Faris's cyber portfolio" onclick="location.href='projects.html'">Enter</button>
+
   <footer>
     &copy; 2025 Faris. Built with grit and GitHub Pages.
   </footer>
+
+  <script>
+    const taglines = ["Faris", "Cyber Strategist", "Payload Architect", "Built Not Bought"];
+    let i = 0;
+    setInterval(() => {
+      document.getElementById("tagline").textContent = taglines[i++ % taglines.length];
+    }, 1000);
+  </script>
 </body>
 </html>
