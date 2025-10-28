@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Faris's cyber portfolio is under construction. Stay tuned for something epic." />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <title>Faris | Under Construction</title>
+  <style>
+    :root {
+      --bg-start: #0f0f0f;
+      --bg-end: #1a1a1a;
+      --text-main: #e0e0e0;
+      --accent: #00ffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, var(--bg-start), var(--bg-end));
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .robot {
+      width: 120px;
+      height: 120px;
+      background-image: url('robot.svg'); /* Replace with your robot graphic */
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: spin 3s linear infinite;
+      margin-bottom: 30px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--accent);
+      text-shadow: 0 0 10px var(--accent);
+      animation: glitch 1.5s infinite;
+    }
+
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      20% { transform: translate(-2px, 2px); }
+      40% { transform: translate(2px, -2px); }
+      60% { transform: translate(-1px, 1px); }
+      80% { transform: translate(1px, -1px); }
+      100% { transform: translate(0); }
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="robot" aria-label="Spinning robot icon"></div>
+  <h1>Under Construction</h1>
+  <footer>
+    &copy; 2025 Faris. Cyber systems booting up…
+  </footer>
+</body>
+</html>
 
