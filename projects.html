@@ -34,11 +34,8 @@
     }
 
     .robot {
-      width: 120px;
-      height: 120px;
-      background-image: url('robot.svg'); /* Replace with your robot graphic */
-      background-size: contain;
-      background-repeat: no-repeat;
+      width: 150px;
+      height: auto;
       animation: spin 3s linear infinite;
       margin-bottom: 30px;
     }
@@ -70,14 +67,19 @@
       font-size: 0.9rem;
       color: #555;
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      .robot, h1 {
+        animation: none;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="robot" aria-label="Spinning robot icon"></div>
+  <img src="https://i.gifer.com/MPFZ.gif" alt="Spinning robot" class="robot" />
   <h1>Under Construction</h1>
   <footer>
     &copy; 2025 Faris. Cyber systems booting up…
   </footer>
 </body>
 </html>
-
