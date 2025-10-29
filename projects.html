@@ -34,9 +34,9 @@
     }
 
     .robot {
-      width: 150px;
+      width: 180px;
       height: auto;
-      animation: spin 3s linear infinite;
+      animation: spin 4s linear infinite;
       margin-bottom: 30px;
     }
 
@@ -61,6 +61,12 @@
       100% { transform: translate(0); }
     }
 
+    #countdown {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #aaa;
+    }
+
     footer {
       position: absolute;
       bottom: 20px;
@@ -76,10 +82,25 @@
   </style>
 </head>
 <body>
-  <img src="https://i.gifer.com/MPFZ.gif" alt="Spinning robot" class="robot" />
+  <img src="https://i.pinimg.com/originals/1d/da/15/1dda15fc18e2834f05b9058445f6ace3.gif" alt="Spinning robot" class="robot" />
   <h1>Under Construction</h1>
+  <div id="countdown">Redirecting in <span id="timer">10</span> seconds...</div>
   <footer>
     &copy; 2025 Faris. Cyber systems booting up…
   </footer>
+
+  <script>
+    let seconds = 10;
+    const timer = document.getElementById("timer");
+
+    const countdown = setInterval(() => {
+      seconds--;
+      timer.textContent = seconds;
+      if (seconds <= 0) {
+        clearInterval(countdown);
+        window.location.href = "projects.html";
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
